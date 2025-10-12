@@ -1436,14 +1436,14 @@ html {
         border-width: 1.5px;
     }
     
-    /* Segments Container - CENTERED AND SYMMETRIC */
+    /* Segments Container - BETTER CENTERED WITH REDUCED PROFILE */
     .segments-container {
         width: 85vw; /* Smaller for better fit */
         max-width: 350px;
         height: 85vw;
         max-height: 350px;
         left: 50%; /* Center horizontally */
-        top: 48%; /* Move up slightly */
+        top: 46%; /* Moved up more to center around smaller profile */
         transform: translate(-50%, -50%);
         pointer-events: none; /* Container doesn't block clicks */
     }
@@ -1471,15 +1471,15 @@ html {
         display: none; /* Hide preview text on small screens */
     }
     
-    /* Profile Info */
+    /* Profile Info - REDUCED FOR BETTER MOBILE FIT */
     .profile-name {
-        font-size: 1.3rem;
-        letter-spacing: 1.5px;
+        font-size: 1.05rem; /* Reduced from 1.3rem */
+        letter-spacing: 1.2px;
         margin-bottom: 0.25rem;
     }
     
     .profile-title {
-        font-size: 0.8rem;
+        font-size: 0.75rem; /* Reduced from 0.8rem */
         margin-bottom: 1rem;
     }
     
@@ -1504,16 +1504,16 @@ html {
         text-align: center;
     }
     
-    /* Social Links - MUCH SMALLER */
+    /* Social Links - REDUCED FOR MOBILE */
     .social-links {
-        gap: 0.8rem;
-        margin-bottom: 2rem;
+        gap: 0.7rem;
+        margin-bottom: 1.5rem; /* Less space */
     }
     
     .social-icon {
-        width: 34px;
-        height: 34px;
-        font-size: 0.95rem;
+        width: 28px; /* Reduced from 34px */
+        height: 28px; /* Reduced from 34px */
+        font-size: 0.8rem; /* Reduced from 0.95rem */
         border-width: 1.5px;
     }
     
@@ -1608,14 +1608,14 @@ html {
         height: 160px;
     }
     
-    /* Segments Container - PERFECTLY CENTERED */
+    /* Segments Container - BETTER CENTERED WITH SMALLER PROFILE */
     .segments-container {
         width: 80vw; /* Smaller for better fit and symmetry */
         max-width: 330px;
         height: 80vw;
         max-height: 330px;
         left: 50%; /* Center horizontally */
-        top: 47%; /* Move up more for better spacing */
+        top: 45%; /* Moved up to center around smaller profile */
         transform: translate(-50%, -50%);
         pointer-events: none; /* Container doesn't block clicks */
     }
@@ -1639,16 +1639,16 @@ html {
         font-weight: 600;
     }
     
-    /* Profile Info - Smaller */
+    /* Profile Info - MUCH SMALLER FOR MOBILE */
     .profile-name {
-        font-size: 1.15rem;
-        letter-spacing: 1.2px;
+        font-size: 0.95rem; /* Reduced from 1.15rem */
+        letter-spacing: 1px;
         margin-bottom: 0.2rem;
     }
     
     .profile-title {
-        font-size: 0.72rem;
-        margin-bottom: 0.9rem;
+        font-size: 0.65rem; /* Reduced from 0.72rem */
+        margin-bottom: 0.8rem;
     }
     
     /* Stats - 2x2 Grid on Small Mobile */
@@ -1671,16 +1671,16 @@ html {
         font-size: 0.62rem;
     }
     
-    /* Social Links - MUCH SMALLER */
+    /* Social Links - VERY SMALL FOR MOBILE */
     .social-links {
-        gap: 0.7rem;
-        margin-bottom: 2rem;
+        gap: 0.6rem;
+        margin-bottom: 1.5rem; /* Less space */
     }
     
     .social-icon {
-        width: 32px;
-        height: 32px;
-        font-size: 0.9rem;
+        width: 26px; /* Reduced from 32px */
+        height: 26px; /* Reduced from 32px */
+        font-size: 0.75rem; /* Reduced from 0.9rem */
         border-width: 1.5px;
     }
     
@@ -1749,14 +1749,14 @@ html {
         height: 150px;
     }
     
-    /* Segments - PERFECT CENTERING AND SYMMETRY */
+    /* Segments - OPTIMALLY CENTERED WITH TINY PROFILE */
     .segments-container {
         width: 78vw; /* Smaller for perfect fit */
         max-width: 320px;
         height: 78vw;
         max-height: 320px;
         left: 50%; /* Center horizontally */
-        top: 46%; /* Move up more for better spacing */
+        top: 44%; /* Moved up more to center around tiny profile */
         transform: translate(-50%, -50%);
         pointer-events: none; /* Container doesn't block clicks */
     }
@@ -1780,14 +1780,14 @@ html {
         font-weight: 600;
     }
     
-    /* Profile Text */
+    /* Profile Text - SMALLEST FOR TINY MOBILE */
     .profile-name {
-        font-size: 1.08rem;
-        letter-spacing: 1px;
+        font-size: 0.88rem; /* Reduced from 1.08rem */
+        letter-spacing: 0.8px;
     }
     
     .profile-title {
-        font-size: 0.68rem;
+        font-size: 0.62rem; /* Reduced from 0.68rem */
     }
     
     /* Stats in 2x2 Grid */
@@ -1810,16 +1810,16 @@ html {
         font-size: 0.58rem;
     }
     
-    /* Social Icons - SMALLER */
+    /* Social Icons - EXTRA SMALL FOR TINY MOBILE */
     .social-links {
-        gap: 0.65rem;
-        margin-bottom: 2rem;
+        gap: 0.55rem;
+        margin-bottom: 1.3rem; /* Less space */
     }
     
     .social-icon {
-        width: 30px;
-        height: 30px;
-        font-size: 0.85rem;
+        width: 24px; /* Reduced from 30px */
+        height: 24px; /* Reduced from 30px */
+        font-size: 0.7rem; /* Reduced from 0.85rem */
         border-width: 1.5px;
     }
     
