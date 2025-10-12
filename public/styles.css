@@ -1436,14 +1436,14 @@ html {
         border-width: 1.5px;
     }
     
-    /* Segments Container - BETTER CENTERED WITH REDUCED PROFILE */
+    /* Segments Container - SYMMETRIC AROUND IMAGE LIKE LAPTOP */
     .segments-container {
         width: 85vw; /* Smaller for better fit */
         max-width: 350px;
         height: 85vw;
         max-height: 350px;
         left: 50%; /* Center horizontally */
-        top: 46%; /* Moved up more to center around smaller profile */
+        top: 43%; /* Moved UP significantly for symmetry around image */
         transform: translate(-50%, -50%);
         pointer-events: none; /* Container doesn't block clicks */
     }
@@ -1471,16 +1471,16 @@ html {
         display: none; /* Hide preview text on small screens */
     }
     
-    /* Profile Info - REDUCED FOR BETTER MOBILE FIT */
+    /* Profile Info - MUCH SMALLER FOR MOBILE */
     .profile-name {
-        font-size: 1.05rem; /* Reduced from 1.3rem */
-        letter-spacing: 1.2px;
-        margin-bottom: 0.25rem;
+        font-size: 0.9rem; /* SIGNIFICANTLY reduced for mobile */
+        letter-spacing: 1px;
+        margin-bottom: 0.2rem;
     }
     
     .profile-title {
-        font-size: 0.75rem; /* Reduced from 0.8rem */
-        margin-bottom: 1rem;
+        font-size: 0.68rem; /* Smaller subtitle */
+        margin-bottom: 0.8rem;
     }
     
     /* Stats - Wrap on Mobile */
@@ -1504,16 +1504,16 @@ html {
         text-align: center;
     }
     
-    /* Social Links - REDUCED FOR MOBILE */
+    /* Social Links - MUCH SMALLER FOR MOBILE */
     .social-links {
-        gap: 0.7rem;
-        margin-bottom: 1.5rem; /* Less space */
+        gap: 0.6rem;
+        margin-bottom: 1.2rem;
     }
     
     .social-icon {
-        width: 28px; /* Reduced from 34px */
-        height: 28px; /* Reduced from 34px */
-        font-size: 0.8rem; /* Reduced from 0.95rem */
+        width: 24px; /* MUCH smaller for mobile */
+        height: 24px; /* MUCH smaller for mobile */
+        font-size: 0.7rem; /* Smaller icons */
         border-width: 1.5px;
     }
     
@@ -1608,14 +1608,14 @@ html {
         height: 160px;
     }
     
-    /* Segments Container - BETTER CENTERED WITH SMALLER PROFILE */
+    /* Segments Container - SYMMETRIC LIKE LAPTOP */
     .segments-container {
         width: 80vw; /* Smaller for better fit and symmetry */
         max-width: 330px;
         height: 80vw;
         max-height: 330px;
         left: 50%; /* Center horizontally */
-        top: 45%; /* Moved up to center around smaller profile */
+        top: 42%; /* Moved UP for symmetry around image */
         transform: translate(-50%, -50%);
         pointer-events: none; /* Container doesn't block clicks */
     }
@@ -1639,16 +1639,16 @@ html {
         font-weight: 600;
     }
     
-    /* Profile Info - MUCH SMALLER FOR MOBILE */
+    /* Profile Info - VERY SMALL FOR SMALL MOBILE */
     .profile-name {
-        font-size: 0.95rem; /* Reduced from 1.15rem */
-        letter-spacing: 1px;
-        margin-bottom: 0.2rem;
+        font-size: 0.85rem; /* Even smaller for small screens */
+        letter-spacing: 0.8px;
+        margin-bottom: 0.18rem;
     }
     
     .profile-title {
-        font-size: 0.65rem; /* Reduced from 0.72rem */
-        margin-bottom: 0.8rem;
+        font-size: 0.6rem; /* Very small subtitle */
+        margin-bottom: 0.7rem;
     }
     
     /* Stats - 2x2 Grid on Small Mobile */
@@ -1671,16 +1671,16 @@ html {
         font-size: 0.62rem;
     }
     
-    /* Social Links - VERY SMALL FOR MOBILE */
+    /* Social Links - EXTRA SMALL FOR SMALL MOBILE */
     .social-links {
-        gap: 0.6rem;
-        margin-bottom: 1.5rem; /* Less space */
+        gap: 0.5rem;
+        margin-bottom: 1.2rem;
     }
     
     .social-icon {
-        width: 26px; /* Reduced from 32px */
-        height: 26px; /* Reduced from 32px */
-        font-size: 0.75rem; /* Reduced from 0.9rem */
+        width: 22px; /* Very small icons */
+        height: 22px; /* Very small icons */
+        font-size: 0.65rem; /* Small icon font */
         border-width: 1.5px;
     }
     
@@ -1749,14 +1749,14 @@ html {
         height: 150px;
     }
     
-    /* Segments - OPTIMALLY CENTERED WITH TINY PROFILE */
+    /* Segments - SYMMETRIC AROUND IMAGE LIKE LAPTOP */
     .segments-container {
         width: 78vw; /* Smaller for perfect fit */
         max-width: 320px;
         height: 78vw;
         max-height: 320px;
         left: 50%; /* Center horizontally */
-        top: 44%; /* Moved up more to center around tiny profile */
+        top: 41%; /* Moved UP significantly for symmetry like laptop */
         transform: translate(-50%, -50%);
         pointer-events: none; /* Container doesn't block clicks */
     }
@@ -1780,14 +1780,14 @@ html {
         font-weight: 600;
     }
     
-    /* Profile Text - SMALLEST FOR TINY MOBILE */
+    /* Profile Text - TINIEST FOR EXTRA SMALL MOBILE */
     .profile-name {
-        font-size: 0.88rem; /* Reduced from 1.08rem */
-        letter-spacing: 0.8px;
+        font-size: 0.78rem; /* Very tiny for small screens */
+        letter-spacing: 0.6px;
     }
     
     .profile-title {
-        font-size: 0.62rem; /* Reduced from 0.68rem */
+        font-size: 0.56rem; /* Very tiny subtitle */
     }
     
     /* Stats in 2x2 Grid */
@@ -1810,16 +1810,16 @@ html {
         font-size: 0.58rem;
     }
     
-    /* Social Icons - EXTRA SMALL FOR TINY MOBILE */
+    /* Social Icons - TINIEST FOR EXTRA SMALL MOBILE */
     .social-links {
-        gap: 0.55rem;
-        margin-bottom: 1.3rem; /* Less space */
+        gap: 0.5rem;
+        margin-bottom: 1.1rem;
     }
     
     .social-icon {
-        width: 24px; /* Reduced from 30px */
-        height: 24px; /* Reduced from 30px */
-        font-size: 0.7rem; /* Reduced from 0.85rem */
+        width: 20px; /* Tiny icons for small screens */
+        height: 20px; /* Tiny icons for small screens */
+        font-size: 0.6rem; /* Tiny icon font */
         border-width: 1.5px;
     }
     
