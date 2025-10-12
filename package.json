@@ -1,0 +1,23 @@
+{
+  "name": "sohith-kancharana-portfolio",
+  "version": "1.0.0",
+  "description": "Futuristic AI Engineer Portfolio - Sohith Kancharana",
+  "main": "public/index.html",
+  "scripts": {
+    "start": "npx serve public",
+    "dev": "npx serve public"
+  },
+  "keywords": [
+    "portfolio",
+    "ai-engineer",
+    "chatbot-developer",
+    "futuristic-portfolio"
+  ],
+  "author": "Sohith Kancharana <sohithkancharana@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sohithkancharana/portfolio"
+  }
+}
+
