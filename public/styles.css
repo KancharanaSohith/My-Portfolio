@@ -1436,34 +1436,52 @@ html {
         border-width: 1.5px;
     }
     
-    /* Segments Container - SYMMETRIC AROUND IMAGE LIKE LAPTOP */
+    /* Segments Container - GRID LAYOUT FOR MOBILE */
     .segments-container {
-        width: 85vw; /* Smaller for better fit */
-        max-width: 350px;
-        height: 85vw;
-        max-height: 350px;
-        left: 50%; /* Center horizontally */
-        top: 43%; /* Moved UP significantly for symmetry around image */
-        transform: translate(-50%, -50%);
-        pointer-events: none; /* Container doesn't block clicks */
+        position: static; /* Remove absolute positioning */
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin-top: 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 0.6rem;
+        padding: 0 0.5rem;
+        transform: none;
+        pointer-events: all;
     }
     
     .segment {
-        width: 64px;
-        padding: 0.32rem;
+        position: static; /* Override absolute positioning */
+        width: 100%;
+        padding: 0.6rem 0.3rem;
         border-width: 1.5px;
         cursor: pointer;
-        z-index: 100; /* Ensure clickable */
-        pointer-events: all; /* Segments are clickable */
+        z-index: 100;
+        pointer-events: all;
+        transform: none !important; /* Override any positioning transforms */
+        top: auto !important;
+        left: auto !important;
     }
     
+    /* Reorder segments by priority for mobile */
+    .segment-about { order: 1; }
+    .segment-experience { order: 2; }
+    .segment-skills { order: 3; }
+    .segment-achievements { order: 4; }
+    .segment-professional { order: 5; }
+    .segment-personal { order: 6; }
+    .segment-education { order: 7; }
+    .segment-freelance { order: 8; }
+    .segment-contact { order: 9; }
+    
     .segment-icon {
-        font-size: 1.05rem;
-        margin-bottom: 0.12rem;
+        font-size: 1.2rem;
+        margin-bottom: 0.2rem;
     }
     
     .segment-title {
-        font-size: 0.48rem;
+        font-size: 0.52rem;
         line-height: 1.1;
     }
     
@@ -1473,8 +1491,8 @@ html {
     
     /* Profile Info - MUCH SMALLER FOR MOBILE */
     .profile-name {
-        font-size: 0.9rem; /* SIGNIFICANTLY reduced for mobile */
-        letter-spacing: 1px;
+        font-size: 0.7rem; /* Further reduced for better mobile fit */
+        letter-spacing: 0.8px;
         margin-bottom: 0.2rem;
     }
     
@@ -1608,41 +1626,59 @@ html {
         height: 160px;
     }
     
-    /* Segments Container - SYMMETRIC LIKE LAPTOP */
+    /* Segments Container - GRID LAYOUT FOR MOBILE */
     .segments-container {
-        width: 80vw; /* Smaller for better fit and symmetry */
-        max-width: 330px;
-        height: 80vw;
-        max-height: 330px;
-        left: 50%; /* Center horizontally */
-        top: 42%; /* Moved UP for symmetry around image */
-        transform: translate(-50%, -50%);
-        pointer-events: none; /* Container doesn't block clicks */
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin-top: 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.55rem;
+        padding: 0 0.4rem;
+        transform: none;
+        pointer-events: all;
     }
     
     .segment {
-        width: 58px;
-        padding: 0.28rem;
+        position: static;
+        width: 100%;
+        padding: 0.55rem 0.3rem;
         cursor: pointer;
-        z-index: 100; /* Ensure clickable */
-        pointer-events: all; /* Segments are clickable */
+        z-index: 100;
+        pointer-events: all;
+        transform: none !important;
+        top: auto !important;
+        left: auto !important;
     }
     
+    /* Reorder segments by priority for mobile */
+    .segment-about { order: 1; }
+    .segment-experience { order: 2; }
+    .segment-skills { order: 3; }
+    .segment-achievements { order: 4; }
+    .segment-professional { order: 5; }
+    .segment-personal { order: 6; }
+    .segment-education { order: 7; }
+    .segment-freelance { order: 8; }
+    .segment-contact { order: 9; }
+    
     .segment-icon {
-        font-size: 0.98rem;
-        margin-bottom: 0.1rem;
+        font-size: 1.15rem;
+        margin-bottom: 0.2rem;
     }
     
     .segment-title {
-        font-size: 0.44rem;
+        font-size: 0.5rem;
         line-height: 1.05;
         font-weight: 600;
     }
     
     /* Profile Info - VERY SMALL FOR SMALL MOBILE */
     .profile-name {
-        font-size: 0.85rem; /* Even smaller for small screens */
-        letter-spacing: 0.8px;
+        font-size: 0.68rem; /* Even smaller for small screens */
+        letter-spacing: 0.7px;
         margin-bottom: 0.18rem;
     }
     
@@ -1749,41 +1785,59 @@ html {
         height: 150px;
     }
     
-    /* Segments - SYMMETRIC AROUND IMAGE LIKE LAPTOP */
+    /* Segments - GRID LAYOUT FOR MOBILE */
     .segments-container {
-        width: 78vw; /* Smaller for perfect fit */
-        max-width: 320px;
-        height: 78vw;
-        max-height: 320px;
-        left: 50%; /* Center horizontally */
-        top: 41%; /* Moved UP significantly for symmetry like laptop */
-        transform: translate(-50%, -50%);
-        pointer-events: none; /* Container doesn't block clicks */
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin-top: 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+        padding: 0 0.35rem;
+        transform: none;
+        pointer-events: all;
     }
     
     .segment {
-        width: 55px;
-        padding: 0.26rem;
+        position: static;
+        width: 100%;
+        padding: 0.5rem 0.25rem;
         cursor: pointer;
         z-index: 100;
-        pointer-events: all; /* Segments are clickable */
+        pointer-events: all;
+        transform: none !important;
+        top: auto !important;
+        left: auto !important;
     }
     
+    /* Reorder segments by priority for mobile */
+    .segment-about { order: 1; }
+    .segment-experience { order: 2; }
+    .segment-skills { order: 3; }
+    .segment-achievements { order: 4; }
+    .segment-professional { order: 5; }
+    .segment-personal { order: 6; }
+    .segment-education { order: 7; }
+    .segment-freelance { order: 8; }
+    .segment-contact { order: 9; }
+    
     .segment-icon {
-        font-size: 0.92rem;
-        margin-bottom: 0.08rem;
+        font-size: 1.1rem;
+        margin-bottom: 0.18rem;
     }
     
     .segment-title {
-        font-size: 0.42rem;
+        font-size: 0.48rem;
         line-height: 1;
         font-weight: 600;
     }
     
     /* Profile Text - TINIEST FOR EXTRA SMALL MOBILE */
     .profile-name {
-        font-size: 0.78rem; /* Very tiny for small screens */
-        letter-spacing: 0.6px;
+        font-size: 0.65rem; /* Very tiny for small screens */
+        letter-spacing: 0.5px;
     }
     
     .profile-title {
