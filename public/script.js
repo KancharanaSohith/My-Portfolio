@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 detailPanel.classList.add('active');
             }, 10);
             
-            // Prevent body scroll
-            document.body.style.overflow = 'hidden';
+            // Prevent body scroll when panel is open
+            document.body.classList.add('panel-open');
             
             // Add entrance animation to content
             animateContent();
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Re-enable body scroll
         setTimeout(() => {
-            document.body.style.overflow = 'auto';
+            document.body.classList.remove('panel-open');
         }, 500);
     }
     
