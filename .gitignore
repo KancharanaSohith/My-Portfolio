@@ -36,3 +36,5 @@ build/
 *.backup
 ~*
 
+mobile-test.html
+
