@@ -1685,15 +1685,16 @@ body.panel-open {
     
     /* Social Links - Better sized for mobile */
     .social-links {
-        gap: 0.8rem; /* More breathing room */
-        margin-bottom: 1.2rem;
+        gap: 1rem; /* More breathing room */
+        margin-bottom: 1.5rem;
         justify-content: center; /* Center icons in one line */
+        flex-wrap: wrap; /* Allow wrapping if needed */
     }
     
     .social-icon {
-        width: 35px; /* Better touch target size */
-        height: 35px;
-        font-size: 1rem; /* Larger, more visible icons */
+        width: 45px; /* Much larger touch target */
+        height: 45px;
+        font-size: 1.2rem; /* Larger, more visible icons */
         border-width: 2px;
     }
     
@@ -1896,15 +1897,16 @@ body.panel-open {
     
     /* Social Links - Good size for smaller mobile */
     .social-links {
-        gap: 0.7rem; /* Good spacing */
+        gap: 0.9rem; /* Good spacing */
         margin-bottom: 1.2rem;
         justify-content: center;
+        flex-wrap: wrap;
     }
     
     .social-icon {
-        width: 32px; /* Good touch target */
-        height: 32px;
-        font-size: 0.9rem; /* Readable icons */
+        width: 40px; /* Larger touch target */
+        height: 40px;
+        font-size: 1.1rem; /* More visible icons */
         border-width: 2px;
     }
     
@@ -2086,15 +2088,16 @@ body.panel-open {
     
     /* Social Icons - Properly sized for extra small mobile */
     .social-links {
-        gap: 0.6rem; /* Adequate spacing */
+        gap: 0.8rem; /* Adequate spacing */
         margin-bottom: 1.1rem;
         justify-content: center;
+        flex-wrap: wrap;
     }
     
     .social-icon {
-        width: 30px; /* Still touch-friendly on small screens */
-        height: 30px;
-        font-size: 0.85rem; /* Readable icons */
+        width: 38px; /* Larger for better touch */
+        height: 38px;
+        font-size: 1rem; /* More visible icons */
         border-width: 2px;
     }
     
