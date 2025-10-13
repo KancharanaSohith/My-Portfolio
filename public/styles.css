@@ -25,7 +25,7 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow: hidden; /* Prevent html from creating scrollbar */
     height: 100%;
     width: 100%;
 }
@@ -35,8 +35,8 @@ body {
     background: var(--primary-dark);
     color: var(--text-white);
     overflow-x: hidden;
-    overflow-y: auto; /* Allow smooth scrolling */
-    min-height: 100vh;
+    overflow-y: auto; /* Body handles all scrolling - ONE scrollbar */
+    height: 100vh; /* Fixed viewport height */
     width: 100%;
     margin: 0;
     padding: 0;
