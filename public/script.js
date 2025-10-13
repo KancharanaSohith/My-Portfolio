@@ -5,6 +5,51 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     
+    // Create Moving Stars Background
+    function createMovingStars() {
+        const starsContainer = document.getElementById('starsContainer');
+        const numberOfStars = 40; // Not too many, just enough to be recognizable
+        
+        for (let i = 0; i < numberOfStars; i++) {
+            const star = document.createElement('div');
+            star.className = 'moving-star';
+            
+            // Random size (small, medium, large)
+            const sizeRandom = Math.random();
+            if (sizeRandom < 0.6) {
+                star.classList.add('small');
+            } else if (sizeRandom < 0.9) {
+                star.classList.add('medium');
+            } else {
+                star.classList.add('large');
+            }
+            
+            // Random horizontal position
+            star.style.left = Math.random() * 100 + '%';
+            
+            // Random starting vertical position (some already in view, some coming)
+            star.style.top = Math.random() * -100 + '%';
+            
+            // Random animation duration (speed varies for depth effect)
+            // Smaller stars move faster (closer), larger stars move slower (further)
+            const duration = star.classList.contains('small') 
+                ? Math.random() * 20 + 15  // 15-35s
+                : star.classList.contains('medium')
+                ? Math.random() * 30 + 25  // 25-55s
+                : Math.random() * 40 + 35; // 35-75s
+            
+            star.style.animationDuration = `${duration}s, 2s`;
+            
+            // Random delay for staggered effect
+            star.style.animationDelay = Math.random() * -30 + 's';
+            
+            starsContainer.appendChild(star);
+        }
+    }
+    
+    // Initialize moving stars
+    createMovingStars();
+    
     // Get elements
     const segments = document.querySelectorAll('.segment');
     const detailPanel = document.getElementById('detailPanel');
@@ -213,6 +258,54 @@ document.addEventListener('DOMContentLoaded', () => {
             downloadResume();
         }
     });
+    
+    // Shooting Stars Effect
+    function createShootingStar() {
+        const star = document.createElement('div');
+        star.className = 'shooting-star';
+        
+        // Randomly make some stars purple variant
+        if (Math.random() > 0.6) {
+            star.classList.add('variant');
+        }
+        
+        // Random position at top or right edge
+        const startFromTop = Math.random() > 0.5;
+        
+        if (startFromTop) {
+            // Start from top edge
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = '0px';
+        } else {
+            // Start from right edge
+            star.style.left = '100%';
+            star.style.top = Math.random() * 50 + '%';
+        }
+        
+        document.body.appendChild(star);
+        
+        // Trigger animation
+        setTimeout(() => {
+            star.classList.add('animate');
+        }, 10);
+        
+        // Remove after animation
+        setTimeout(() => {
+            star.remove();
+        }, 1500);
+    }
+    
+    // Create shooting stars at random intervals
+    function scheduleShooting() {
+        createShootingStar();
+        
+        // Schedule next shooting star between 3-8 seconds
+        const nextDelay = Math.random() * 5000 + 3000;
+        setTimeout(scheduleShooting, nextDelay);
+    }
+    
+    // Start shooting stars after page load
+    setTimeout(scheduleShooting, 2000);
     
     // Console greeting
     console.log('%c🚀 FUTURISTIC PORTFOLIO', 'font-size: 20px; color: #00d4ff; font-weight: bold;');
