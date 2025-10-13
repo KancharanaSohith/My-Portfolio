@@ -1683,17 +1683,18 @@ body.panel-open {
         text-align: center;
     }
     
-    /* Social Links - MUCH SMALLER FOR MOBILE */
+    /* Social Links - Better sized for mobile */
     .social-links {
-        gap: 0.6rem;
+        gap: 0.8rem; /* More breathing room */
         margin-bottom: 1.2rem;
+        justify-content: center; /* Center icons in one line */
     }
     
     .social-icon {
-        width: 24px; /* MUCH smaller for mobile */
-        height: 24px; /* MUCH smaller for mobile */
-        font-size: 0.7rem; /* Smaller icons */
-        border-width: 1.5px;
+        width: 35px; /* Better touch target size */
+        height: 35px;
+        font-size: 1rem; /* Larger, more visible icons */
+        border-width: 2px;
     }
     
     .detail-panel {
@@ -1893,17 +1894,18 @@ body.panel-open {
         font-size: 0.62rem;
     }
     
-    /* Social Links - EXTRA SMALL FOR SMALL MOBILE */
+    /* Social Links - Good size for smaller mobile */
     .social-links {
-        gap: 0.5rem;
+        gap: 0.7rem; /* Good spacing */
         margin-bottom: 1.2rem;
+        justify-content: center;
     }
     
     .social-icon {
-        width: 22px; /* Very small icons */
-        height: 22px; /* Very small icons */
-        font-size: 0.65rem; /* Small icon font */
-        border-width: 1.5px;
+        width: 32px; /* Good touch target */
+        height: 32px;
+        font-size: 0.9rem; /* Readable icons */
+        border-width: 2px;
     }
     
     .detail-panel {
@@ -2082,17 +2084,18 @@ body.panel-open {
         font-size: 0.58rem;
     }
     
-    /* Social Icons - TINIEST FOR EXTRA SMALL MOBILE */
+    /* Social Icons - Properly sized for extra small mobile */
     .social-links {
-        gap: 0.5rem;
+        gap: 0.6rem; /* Adequate spacing */
         margin-bottom: 1.1rem;
+        justify-content: center;
     }
     
     .social-icon {
-        width: 20px; /* Tiny icons for small screens */
-        height: 20px; /* Tiny icons for small screens */
-        font-size: 0.6rem; /* Tiny icon font */
-        border-width: 1.5px;
+        width: 30px; /* Still touch-friendly on small screens */
+        height: 30px;
+        font-size: 0.85rem; /* Readable icons */
+        border-width: 2px;
     }
     
     .close-panel {
