@@ -60,19 +60,19 @@ export default function Header({ config, isDarkMode, onToggleTheme }: HeaderProp
       } ${layout === 'brutalist' ? 'border-b-3 border-zinc-900 bg-white' : ''}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14 sm:h-20">
+        <div className="flex items-center justify-between h-14 gap-2 sm:h-20">
           {/* Logo */}
-          <div className="flex min-w-0 items-center gap-2">
-            <div className={`p-1.5 rounded-lg ${
+          <div className="flex min-w-0 flex-1 items-center gap-1.5 sm:flex-none sm:gap-2">
+            <div className={`shrink-0 p-1 sm:p-1.5 rounded-lg ${
               layout === 'brutalist' 
                 ? 'border-2 border-zinc-900 bg-yellow-300 shadow-[2px_2px_0px_#000]' 
                 : layout === 'parchment'
                 ? 'border border-[#b29252] bg-[#fdf8ed] text-[#7a5c21] dark:bg-[#2a2114] dark:text-[#f3d38b] dark:border-[#d2b173]/55 rounded-none shadow-sm'
                 : 'bg-zinc-900 text-white dark:bg-[#15171e]'
             }`}>
-              <Sparkles className="h-5 w-5 text-amber-500 animate-pulse" />
+              <Sparkles className="h-4 w-4 text-amber-500 animate-pulse sm:h-5 sm:w-5" />
             </div>
-            <span className={`truncate text-base font-bold tracking-tight sm:text-lg ${
+            <span className={`whitespace-nowrap text-[15px] font-bold tracking-tight sm:text-lg ${
               layout === 'brutalist' 
                 ? 'text-zinc-950 uppercase font-black' 
                 : layout === 'parchment'

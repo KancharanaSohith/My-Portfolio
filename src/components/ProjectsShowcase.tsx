@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { ExternalLink, Github, Layers, Search, Eye, X, BookOpen } from 'lucide-react';
 import { PortfolioConfig, Project, ProjectSource } from '../types';
 import { ACCENT_MAP, getLayoutStyle, getSectionBgClass } from '../utils';
@@ -17,6 +17,19 @@ export default function ProjectsShowcase({ config }: ProjectsShowcaseProps) {
   const layoutSet = getLayoutStyle(layout, accent);
 
   const sourceFilters: Array<'All' | ProjectSource> = ['All', 'Work', 'Personal', 'Freelance'];
+
+  useEffect(() => {
+    if (!activeModalProject) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setActiveModalProject(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [activeModalProject]);
 
   const filteredProjects = useMemo(() => {
     return projects.filter((project) => {
@@ -244,9 +257,18 @@ export default function ProjectsShowcase({ config }: ProjectsShowcaseProps) {
                 : 'rounded-2xl shadow-2xl border border-zinc-200 dark:border-zinc-850'
             }`}
           >
+            <button
+              type="button"
+              onClick={() => setActiveModalProject(null)}
+              className="sticky top-3 right-3 z-30 ml-auto mr-3 mt-3 flex h-11 w-11 items-center justify-center border border-[#b29252]/60 bg-[#1e1a15] text-[#fff5db] shadow-xl transition-all hover:bg-[#2a2114] focus:outline-none focus:ring-2 focus:ring-[#d2b173] sm:absolute sm:right-4 sm:top-4 sm:mt-0"
+              title="Close case study"
+              aria-label="Close case study"
+            >
+              <X className="h-5 w-5" />
+            </button>
             
             {/* Modal header details bar */}
-            <div className={`p-4 sm:p-6 border-b border-zinc-100 dark:border-zinc-900 flex items-start justify-between gap-3 sticky top-0 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md z-10`}>
+            <div className={`p-4 pt-1 sm:p-6 sm:pr-20 border-b border-zinc-100 dark:border-zinc-900 flex items-start justify-between gap-3 sticky top-0 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md z-10`}>
               <div className="min-w-0">
                 <span className={`text-[10px] font-mono font-black tracking-widest uppercase mb-1 block ${accentSet.primaryText}`}>
                   {activeModalProject.category} Project ARCHITECTURE
@@ -256,10 +278,13 @@ export default function ProjectsShowcase({ config }: ProjectsShowcaseProps) {
                 </h3>
               </div>
               <button
+                type="button"
                 onClick={() => setActiveModalProject(null)}
-                className="shrink-0 p-2 text-zinc-400 hover:text-zinc-850 dark:hover:text-white rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 cursor-pointer"
+                className="shrink-0 p-2.5 text-zinc-600 hover:text-zinc-950 dark:text-zinc-300 dark:hover:text-white rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 cursor-pointer sm:hidden"
+                title="Close case study"
+                aria-label="Close case study"
               >
-                <X className="h-5 w-5" />
+                <X className="h-6 w-6" />
               </button>
             </div>
 
