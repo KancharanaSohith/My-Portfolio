@@ -1,40 +1,8 @@
-# Operating System Files
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# Editor Files
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
-*.swp
-*.swo
-*~
-
-# Temporary Files
-*.tmp
-*.temp
-*.log
-
-# Node modules (if you add any build tools later)
 node_modules/
-package-lock.json
-
-# Build outputs (if you add build process)
-dist/
 build/
-*.min.js
-*.min.css
-
-# Environment files
-.env
-.env.local
-
-# Backup files
-*.bak
-*.backup
-~*
-
-mobile-test.html
-
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example

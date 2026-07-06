@@ -1,0 +1,8 @@
+{
+  "name": "Professional Portfolio",
+  "description": "An interactive, highly polished, and modern professional developer portfolio template with responsive layouts, customizable profile details, style togglers, and clean typography.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
