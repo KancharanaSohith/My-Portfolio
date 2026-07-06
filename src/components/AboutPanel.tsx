@@ -49,7 +49,7 @@ export default function AboutPanel({ config }: AboutPanelProps) {
               {layout === 'parchment' || layout === 'darkGrimoire' ? 'AI Systems Engineer' : 'Senior AI Engineer'}
             </h2>
             <h1
-              className={`w-full max-w-full text-[clamp(2.8rem,13vw,3.35rem)] min-[390px]:text-[clamp(3rem,13vw,3.65rem)] sm:max-w-none sm:text-6xl tracking-tight leading-[0.95] mb-5 sm:mb-6 font-display break-words overflow-visible ${
+              className={`w-full max-w-full text-[clamp(2.15rem,10.5vw,2.8rem)] min-[390px]:text-[clamp(2.35rem,10.5vw,3rem)] sm:max-w-none sm:text-6xl tracking-tight leading-[0.95] mb-5 sm:mb-6 font-display overflow-visible ${
                 layout === 'brutalist'
                   ? 'text-zinc-950 uppercase line-clamp-2'
                   : layout === 'parchment'
@@ -57,7 +57,7 @@ export default function AboutPanel({ config }: AboutPanelProps) {
                   : 'text-zinc-900 dark:text-white'
               }`}
             >
-              Hi, I'm <span className={layout === 'brutalist' ? 'underline decoration-yellow-400 decoration-8' : `bg-gradient-to-r ${accentSet.gradient} bg-clip-text text-transparent`}>{personal.name}</span>
+              Hi, I'm <span className={layout === 'brutalist' ? 'underline decoration-yellow-400 decoration-8' : `bg-gradient-to-r ${accentSet.gradient} bg-clip-text text-transparent whitespace-nowrap`}>{personal.name}</span>
             </h1>
 
             {/* Subtitle / Role */}
