@@ -49,7 +49,7 @@ export default function AboutPanel({ config }: AboutPanelProps) {
               {layout === 'parchment' || layout === 'darkGrimoire' ? 'AI Systems Engineer' : 'Senior AI Engineer'}
             </h2>
             <h1
-              className={`max-w-[12ch] text-[clamp(2.45rem,15vw,4rem)] sm:max-w-none sm:text-6xl tracking-tight leading-[0.95] mb-5 sm:mb-6 font-display ${
+              className={`w-full max-w-full text-[clamp(2.8rem,13vw,3.35rem)] min-[390px]:text-[clamp(3rem,13vw,3.65rem)] sm:max-w-none sm:text-6xl tracking-tight leading-[0.95] mb-5 sm:mb-6 font-display break-words overflow-visible ${
                 layout === 'brutalist'
                   ? 'text-zinc-950 uppercase line-clamp-2'
                   : layout === 'parchment'
