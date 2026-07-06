@@ -59,7 +59,7 @@ export default function Header({ config, isDarkMode, onToggleTheme }: HeaderProp
           : 'bg-transparent text-[#3c2f1a] dark:text-[#f3d38b]'
       } ${layout === 'brutalist' ? 'border-b-3 border-zinc-900 bg-white' : ''}`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 gap-2 sm:h-20">
           {/* Logo */}
           <div className="flex min-w-0 flex-1 items-center gap-1.5 sm:flex-none sm:gap-2">
@@ -72,11 +72,11 @@ export default function Header({ config, isDarkMode, onToggleTheme }: HeaderProp
             }`}>
               <Sparkles className="h-4 w-4 text-amber-500 animate-pulse sm:h-5 sm:w-5" />
             </div>
-            <span className={`whitespace-nowrap text-[15px] font-bold tracking-tight sm:text-lg ${
+            <span className={`whitespace-nowrap text-[13px] min-[380px]:text-[14px] font-bold tracking-tight sm:text-lg ${
               layout === 'brutalist' 
                 ? 'text-zinc-950 uppercase font-black' 
                 : layout === 'parchment'
-                ? 'text-[#6e5322] dark:text-[#f6d98d] font-display font-semibold tracking-wide'
+                ? 'text-[#6e5322] dark:text-[#f6d98d] font-display font-semibold tracking-normal sm:tracking-wide'
                 : 'text-zinc-900 dark:text-white'
             }`}>
               {personal.name}
@@ -155,11 +155,11 @@ export default function Header({ config, isDarkMode, onToggleTheme }: HeaderProp
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex shrink-0 items-center gap-1.5">
+          <div className="md:hidden flex shrink-0 items-center gap-1">
             <button
               type="button"
               onClick={onToggleTheme}
-              className={`p-2 transition-colors ${
+              className={`p-1.5 sm:p-2 transition-colors ${
                 layout === 'brutalist'
                   ? 'border-2 border-zinc-900 text-zinc-900 bg-white'
                   : 'text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900'
@@ -167,17 +167,17 @@ export default function Header({ config, isDarkMode, onToggleTheme }: HeaderProp
               title={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
               aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
             >
-              {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              {isDarkMode ? <Sun className="h-4 w-4 sm:h-5 sm:w-5" /> : <Moon className="h-4 w-4 sm:h-5 sm:w-5" />}
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`p-2 transition-colors ${
+              className={`p-1.5 sm:p-2 transition-colors ${
                 layout === 'brutalist'
                   ? 'border-2 border-zinc-900 text-zinc-900 bg-white'
                   : 'text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900'
               }`}
             >
-              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isOpen ? <X className="h-4 w-4 sm:h-5 sm:w-5" /> : <Menu className="h-4 w-4 sm:h-5 sm:w-5" />}
             </button>
           </div>
         </div>

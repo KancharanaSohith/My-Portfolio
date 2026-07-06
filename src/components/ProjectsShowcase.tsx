@@ -241,7 +241,7 @@ export default function ProjectsShowcase({ config }: ProjectsShowcaseProps) {
 
       {/* Case Study Fulloverlay Overlay Modal */}
       {activeModalProject && (
-        <div className="fixed inset-0 z-50 flex items-end justify-center p-3 sm:items-center sm:p-4">
+        <div className="fixed inset-0 z-[100] flex items-end justify-center p-3 sm:items-start sm:p-4 sm:pt-28">
           
           {/* Backdrop screen lock mask */}
           <div
@@ -260,7 +260,7 @@ export default function ProjectsShowcase({ config }: ProjectsShowcaseProps) {
             <button
               type="button"
               onClick={() => setActiveModalProject(null)}
-              className="sticky top-3 right-3 z-30 ml-auto mr-3 mt-3 flex h-11 w-11 items-center justify-center border border-[#b29252]/60 bg-[#1e1a15] text-[#fff5db] shadow-xl transition-all hover:bg-[#2a2114] focus:outline-none focus:ring-2 focus:ring-[#d2b173] sm:absolute sm:right-4 sm:top-4 sm:mt-0"
+              className="sticky top-3 right-3 z-[110] ml-auto mr-3 mt-3 flex h-11 w-11 items-center justify-center border border-[#b29252]/60 bg-[#1e1a15] text-[#fff5db] shadow-xl transition-all hover:bg-[#2a2114] focus:outline-none focus:ring-2 focus:ring-[#d2b173] sm:absolute sm:right-4 sm:top-4 sm:mt-0"
               title="Close case study"
               aria-label="Close case study"
             >
@@ -268,7 +268,7 @@ export default function ProjectsShowcase({ config }: ProjectsShowcaseProps) {
             </button>
             
             {/* Modal header details bar */}
-            <div className={`p-4 pt-1 sm:p-6 sm:pr-20 border-b border-zinc-100 dark:border-zinc-900 flex items-start justify-between gap-3 sticky top-0 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md z-10`}>
+            <div className={`p-4 pt-1 sm:p-6 sm:pr-20 border-b border-zinc-100 dark:border-zinc-900 flex items-start justify-between gap-3 sticky top-0 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md z-[105]`}>
               <div className="min-w-0">
                 <span className={`text-[10px] font-mono font-black tracking-widest uppercase mb-1 block ${accentSet.primaryText}`}>
                   {activeModalProject.category} Project ARCHITECTURE
