@@ -57,7 +57,9 @@ export default function AboutPanel({ config }: AboutPanelProps) {
                   : 'text-zinc-900 dark:text-white'
               }`}
             >
-              Hi, I'm <span className={layout === 'brutalist' ? 'underline decoration-yellow-400 decoration-8' : `bg-gradient-to-r ${accentSet.gradient} bg-clip-text text-transparent whitespace-nowrap`}>{personal.name}</span>
+              <span className="block sm:inline">Hi, I'm</span>{' '}
+              <span className={layout === 'brutalist' ? 'block whitespace-nowrap underline decoration-yellow-400 decoration-8 sm:inline' : `block whitespace-nowrap bg-gradient-to-r ${accentSet.gradient} bg-clip-text text-transparent sm:inline`}>Sohith</span>{' '}
+              <span className={layout === 'brutalist' ? 'block whitespace-nowrap underline decoration-yellow-400 decoration-8 sm:inline' : `block whitespace-nowrap bg-gradient-to-r ${accentSet.gradient} bg-clip-text text-transparent sm:inline`}>Kancharana</span>
             </h1>
 
             {/* Subtitle / Role */}
